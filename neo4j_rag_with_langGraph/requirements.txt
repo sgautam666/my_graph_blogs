@@ -1,2 +1,5 @@
 neo4j
+openai
+langchain
+pydantic
 langgraph

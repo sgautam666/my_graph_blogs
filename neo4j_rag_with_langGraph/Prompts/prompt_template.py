@@ -26,6 +26,7 @@ example_prompt = PromptTemplate(
 
 
 def create_few_shot_prompt():
+    '''Create a prompt template without context variable. The suffix provides dynamically selected prompt examples using similarity search'''
     
     prefix = """
     Task:Generate Cypher statement to query a graph database.
@@ -50,6 +51,8 @@ def create_few_shot_prompt():
     return FEW_SHOT_PROMPT
 
 def create_few_shot_prompt_with_context(state: GraphState):
+    '''Create a prompt template with context variable. The context variable will be based on the output from vector qa chain'''
+    '''The output of vector qa is list of node ids against which to perform graph query'''
     
     context = state["article_ids"]
     

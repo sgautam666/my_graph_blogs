@@ -7,6 +7,8 @@ neo4j_pwd = os.environ.get('AURA_PASSWORD')
 
 driver = GraphDatabase.driver(AURA_CONNECTION_URI, auth=(AURA_USERNAME, AURA_PASSWORD))
 
+"""These tools are not currently used, but may be used when implementing agents"""
+
 # Define tools for the agent
 @tool
 def vector_search_tool(question):

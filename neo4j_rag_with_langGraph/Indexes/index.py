@@ -13,7 +13,7 @@ AURA_PASSWORD = os.environ.get('AURA_PASSWORD')
 
 def get_neo4j_vector_index():   
 
-    ''' Create title vector and Instantiate Neo4j vector from graph'''
+    ''' Create vector for article title and abstract and Instantiate Neo4j vector from graph'''
     
     neo4j_vector_index = Neo4jVector.from_existing_graph(
         embedding = EMBEDDING_MODEL,
@@ -29,7 +29,7 @@ def get_neo4j_vector_index():
 
 def get_neo4j_title_vector_index(): 
     
-    '''Create title vector and Instantiate Neo4j vector from graph'''
+    '''Create a title vector and Instantiate Neo4j vector from graph'''
     
     neo4j_title_vector_index = Neo4jVector.from_existing_graph(
         embedding = EMBEDDING_MODEL,
@@ -45,7 +45,7 @@ def get_neo4j_title_vector_index():
 
 def get_neo4j_abstract_vector_index(): 
     
-    ''' Create title vector and Instantiate Neo4j vector from graph'''
+    ''' Create an abstract vector and Instantiate Neo4j vector from graph'''
     
     neo4j_abstract_vector_index = Neo4jVector.from_existing_graph(
         embedding = EMBEDDING_MODEL,
@@ -61,7 +61,7 @@ def get_neo4j_abstract_vector_index():
 
 def get_neo4j_topic_vector_index(): 
     
-    '''Create title vector and Instantiate Neo4j vector from graph'''
+    '''Create a topic vector and Instantiate Neo4j vector from graph'''
     
     neo4j_topic_vector_index = Neo4jVector.from_existing_graph(
         embedding = EMBEDDING_MODEL,
