@@ -31,16 +31,19 @@ llm = ChatOpenAI(
 EMBEDDING_MODEL = OpenAIEmbeddings(openai_api_key=os.environ.get("OPENAI_API_KEY"))
 
 def decomposer(state: GraphState):
-    '''Decompose a give question to sub-queries'''
+    
+    '''Returns a dictionary of at least one of the GraphState'''    
+    '''Decompose a given question to sub-queries'''
+    
     question = state["question"]
     subqueries = query_analyzer.invoke(question)
     return {"subqueries": subqueries, "question":question}
     
 def vector_search(state: GraphState):
     
-    ''' Returns a dict with keys: 
-    dict_keys(['query', 'result', 'source_documents']) 
-    '''
+    ''' Returns a dictionary of at least one of the GraphState'''
+    ''' Perform a vector similarity search and return article id as a parsed output'''
+
     question = state["question"]
     queries = state["subqueries"]
     
@@ -56,11 +59,13 @@ def vector_search(state: GraphState):
     article_ids = [("article_id", doc.metadata.article_id) for doc in documents]
     
     return {"article_ids": article_ids, "documents": extracted_data, "question":question, "subqueries": queries}
-       
-    
-  
-def prompt_template(state: GraphState):
 
+
+def  prompt_template(state: GraphState):
+    
+    '''Returns a dictionary of at least one of the GraphState'''
+    '''Create a simple prompt tempalate for graph qa chain'''
+    
     question = state["question"]
 
     # Create a prompt template
@@ -71,9 +76,9 @@ def prompt_template(state: GraphState):
 
 def graph_qa(state: GraphState):
     
-    ''' Returns a dict with keys: 
-    dict_keys(['query', 'result']) 
-    '''
+    ''' Returns a dictionary of at least one of the GraphState '''
+    ''' Invoke a Graph QA Chain '''
+    
     question = state["question"]
     
     graph_qa_chain = get_graph_qa_chain(state)
@@ -87,11 +92,12 @@ def graph_qa(state: GraphState):
     return {"documents": result, "question":question}
     
 def prompt_template_with_context(state: GraphState):
-
+    
+    '''Returns a dictionary of at least one of the GraphState'''
+    '''Create a dynamic prompt template for graph qa with context chain'''
+    
     question = state["question"]
     queries = state["subqueries"]
-    #chain_result = state["documents"]
-    #context = state["article_ids"]
 
     # Create a prompt template
     prompt_with_context = create_few_shot_prompt_with_context(state)
@@ -102,9 +108,9 @@ def prompt_template_with_context(state: GraphState):
 
 def graph_qa_with_context(state: GraphState):
     
-    ''' Returns a dict with keys: 
-    dict_keys(['query', 'result']) 
-    '''
+    '''Returns a dictionary of at least one of the GraphState'''
+    '''Invoke a Graph QA chain with dynamic prompt template'''
+    
     queries = state["subqueries"]
     prompt_with_context = state["prompt_with_context"]
 
