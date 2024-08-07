@@ -2,7 +2,7 @@
 **Author**: [Suman Gautam](https://www.linkedin.com/in/suman-gautam-usa/)
 
 ![Static Badge](https://img.shields.io/badge/view-blue)
-![Static Badge](https://img.shields.io/badge/discussion-blue)
+![Static Badge](https://img.shields.io/badge/discussion-orange)
 ![Static Badge](https://img.shields.io/badge/downloads-green)
 
 ## Overview
