@@ -1,7 +1,7 @@
 # Neo4j GraphRAG Workflow with LangChain and LangGraph
 **Author**: [Suman Gautam](https://www.linkedin.com/in/suman-gautam-usa/)
 
-![Static Badge](https://img.shields.io/badge/issues-red)
+![Static Badge](https://img.shields.io/badge/view-blue)
 ![Static Badge](https://img.shields.io/badge/discussion-blue)
 ![Static Badge](https://img.shields.io/badge/downloads-green)
 
