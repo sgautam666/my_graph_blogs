@@ -7,7 +7,7 @@ This repos contain notebooks and scripts to chat with Neo4j Graph database. Usin
 This repo is also a companion to a medium article linked here [GraphRAG medium article](https://smngeo.medium.com/neo4j-rag-application-with-langgraph-36f385ee3927)
 
 An example of a workflow:
-![IMG](./my_graph_blogs/neo4j_rag_with_langGraph/images) 
+![IMG](my_graph_blogs/neo4j_rag_with_langGraph/images/LangGraph_workflow.png) 
 
 ## Requirements
 In order to run this repo, you will need access to openai api key and Neo4j graph db instance.
