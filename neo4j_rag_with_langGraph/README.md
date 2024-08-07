@@ -7,7 +7,7 @@ This repos contain notebooks and scripts to chat with Neo4j Graph database. Usin
 This repo is also a companion to a medium article linked here [GraphRAG medium article](https://smngeo.medium.com/neo4j-rag-application-with-langgraph-36f385ee3927)
 
 An example of a workflow:
-![IMG](./neo4j_rag_with_langGraph/images/LangGraph_workflow.png) 
+![IMG](images/LangGraph_workflow.png) 
 
 ## Requirements
 In order to run this repo, you will need access to openai api key and Neo4j graph db instance.
@@ -24,14 +24,14 @@ For Neo4j db, you can spin up a free Neo4j instance here: [Neo4j AuraDB](https:/
 For academic metadata, you can access through OpenAlex api here: [OpenAlex](https://docs.openalex.org/)
 
 
-# Git Push
+## Git Push
 ```
 git status
 git add .
 git commit -m "Your commit message"
 git push origin master
 ```
-# Git ignore
+## Git ignore
 Update the .gitignore file.
 
 If git status shows unintended files, you can remomve them manually from the cache
