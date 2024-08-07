@@ -1,6 +1,10 @@
 # Neo4j GraphRAG Workflow with LangChain and LangGraph
 **Author**: [Suman Gautam](https://www.linkedin.com/in/suman-gautam-usa/)
 
+![Static Badge](https://img.shields.io/badge/issues-red)
+![Static Badge](https://img.shields.io/badge/discussion-blue)
+![Static Badge](https://img.shields.io/badge/downloads-green)
+
 ## Overview
 This repos contain notebooks and scripts to chat with Neo4j Graph database. Using LangGraph, a workflow is designed, which takes an user query and performs either GraphQA or GraphQA with Vector Search. This graph db for this experiment was created in Neo4j with academic journals metadata from OpenAlex.
 
