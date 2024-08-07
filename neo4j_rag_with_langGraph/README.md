@@ -36,13 +36,5 @@ Update the .gitignore file.
 
 If git status shows unintended files, you can remomve them manually from the cache
 ```
-git rm -r --cached neo4j_rag_with_langGraph/.amlignore
-git rm -r --cached neo4j_rag_with_langGraph/.amlignore.amltmp
 git rm -r --cached neo4j_rag_with_langGraph/.ipynb_checkpoints/
-git rm -r --cached neo4j_rag_with_langGraph/.ipynb_aml_checkpoints/
-
-git rm -r --cached neo4j_rag_with_langGraph/.amlignore
-git rm -r --cached neo4j_rag_with_langGraph/.amlignore.amltmp
-git rm -r --cached neo4j_rag_with_langGraph/.ipynb_checkpoints/
-git rm -r --cached neo4j_rag_with_langGraph/.ipynb_aml_checkpoints/
 ```
