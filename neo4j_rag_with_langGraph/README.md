@@ -19,6 +19,17 @@ Following api access are required:
 'AURA_PASSWORD'
 
 The best way to supply them is through ennvironment variable. 
+Add following line your zsh or bash profile on Mac: 
+
+```
+nano ~/.zshrc or ~/.bashrc if bash
+# Add following line inside the file
+export OPENAI_API_KEY="<your api key here>"
+# save and exit
+# on your terminal type:
+source ~/.zshrc or ~/.bashrc
+```
+
 
 For Neo4j db, you can spin up a free Neo4j instance here: [Neo4j AuraDB](https://neo4j.com/cloud/platform/aura-graph-database/?ref=nav-get-started-cta)
 For academic metadata, you can access through OpenAlex api here: [OpenAlex](https://docs.openalex.org/)
