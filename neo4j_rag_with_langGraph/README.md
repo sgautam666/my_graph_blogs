@@ -23,7 +23,8 @@ Following api access are required:
 'AURA_PASSWORD'
 
 The best way to supply them is through ennvironment variable. 
-Add following line your zsh or bash profile on Mac: 
+To add all the key listed above in the zshrc file for persistent saving,
+add following line your zsh or bash profile on Mac: 
 
 ```
 nano ~/.zshrc or ~/.bashrc if bash
@@ -33,7 +34,8 @@ export OPENAI_API_KEY="<your api key here>"
 # on your terminal type:
 source ~/.zshrc or ~/.bashrc
 ```
-Add all the key listed above in the zshrc file for persistent saving. 
+Restart your terminal or notebook! Sometimes, it doesn't detect the api key from environment variable if you don't refresh.
+
 If this doesn't get detected, you may have to manually hard code at the script file that uses these api keys.
 Or add them to os.environ() at runtime and use dotenv() library.
 
