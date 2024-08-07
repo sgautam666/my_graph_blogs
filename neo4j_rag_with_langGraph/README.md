@@ -29,7 +29,9 @@ export OPENAI_API_KEY="<your api key here>"
 # on your terminal type:
 source ~/.zshrc or ~/.bashrc
 ```
-
+Add all the key listed above in the zshrc file for persistent saving. 
+If this doesn't get detected, you may have to manually hard code at the script file that uses these api keys.
+Or add them to os.environ() at runtime and use dotenv() library.
 
 For Neo4j db, you can spin up a free Neo4j instance here: [Neo4j AuraDB](https://neo4j.com/cloud/platform/aura-graph-database/?ref=nav-get-started-cta)
 For academic metadata, you can access through OpenAlex api here: [OpenAlex](https://docs.openalex.org/)
